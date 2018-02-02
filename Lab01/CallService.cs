@@ -9,7 +9,9 @@ public class CallService : MonoBehaviour {
   }
   // https://jsonplaceholder.typicode.com/users
   void GetRequest () {
-    string url = "https://jsonplaceholder.typicode.com/users"   
+    string url = "https://jsonplaceholder.typicode.com/users"
+    WWW www = new WWW(url);
+    StartCoroutine (WaitForRequest());
   }
   
   IEnumerator WaitForRequest() {
